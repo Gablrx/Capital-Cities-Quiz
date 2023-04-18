@@ -20,38 +20,38 @@ function App() {
 
   let [currentQuestion, setNextQuestion] = useState(0);
   let [isCorrect, checkIfCorrect] = useState(false);
-  let [input, clearInput] = useState('');
-
-
-
-
-
-
-  console.log(questions[currentQuestion].country + ' = ' + questions[currentQuestion].correctAnswer)
-
-
+  let [input, setInput] = useState('');
+  let [disabledBtn, setDisabledBtn] = useState(true)
 
 
   const checkUserAnswer = (event) => {
 
     let userAnswer = event.target.value.toLowerCase();
-    clearInput(userAnswer)
-
+    setInput(userAnswer)// L'input affiche ce ui est tapé
+    console.log('disabled ' + disabledBtn);
     if (userAnswer === (questions[currentQuestion].correctAnswer.toLowerCase())) {
-      checkIfCorrect(isCorrect = true)
-      console.log(isCorrect + 'Bravo')
-    } else { console.log(isCorrect) }
+      checkIfCorrect(isCorrect = true); // Bonne réponse
+      setDisabledBtn(false);
+
+    } else {// Mauvaise réponse
+
+      /* setDisabledBtn(isCorrect); */
+    }
   }
+
   const nextQuestion = () => {
-    clearInput('');
-    setNextQuestion(currentQuestion + 1);
-    checkIfCorrect(isCorrect = false);
-    console.log(currentQuestion);
+    setInput(''); // Vide l'input
+    setDisabledBtn(true)
+    setNextQuestion(currentQuestion + 1); // index+1 -> question suivante
+    checkIfCorrect(isCorrect = false); // réinitialise isCorrect
 
   }
-
 
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
+
+  console.log(questions[currentQuestion].country + ' = ' + questions[currentQuestion].correctAnswer)
+  console.log('disabled ' + disabledBtn);
+
   return (
     <div className="App">
       <div className="numQuestion">
@@ -81,7 +81,7 @@ function App() {
         <div className="form">
           <div>
             <input type="text" value={input} onChange={(event) => { checkUserAnswer(event); }} />
-            <button className={isCorrect ? "trueBtn" : "falseBtn"} onClick={() => nextQuestion()}>Next</button>
+            <button disabled={disabledBtn} className={isCorrect ? "trueBtn" : "falseBtn"} onMouseDown={() => nextQuestion()}><span>Next </span></button>
           </div>
 
 
