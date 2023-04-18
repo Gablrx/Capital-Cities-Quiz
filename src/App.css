@@ -24,8 +24,9 @@ h1 {
   font-size: 25px;
 }
 h2 {
-  height: 160px;
+  height: 70;
   font-size: 40px;
+  overflow: visible;
 }
 
 .swing {

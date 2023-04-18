@@ -59,22 +59,29 @@ function App() {
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
   return (
     <div className="App">
+      <div className="numQuestion">
+        <span className="active-question-no">
+          {addLeadingZero(currentQuestion + 1)}
+        </span>
+        <span className="total-question">
+          /{addLeadingZero(questions.length)}
+        </span>
+      </div>
+
+
       <div className="questionBox">
-        <div>
-          <span className="active-question-no">
-            {addLeadingZero(currentQuestion + 1)}
-          </span>
-          <span className="total-question">
-            /{addLeadingZero(questions.length)}
-          </span>
+
+
+        <div className="question">
+          <h1>Quelle est la capitale<br />{questions[currentQuestion].article}</h1>
         </div>
 
+        <div className="country">
+          <h2>{questions[currentQuestion].country}</h2>
 
-        <h1>Quelle est la capitale<br />{questions[currentQuestion].article}</h1>
+        </div>
+        <span className="swing">?</span>
 
-        <h2>{questions[currentQuestion].country} <br />
-          <span className="swing">?</span>
-        </h2>
 
         <div className="form">
           <div>

@@ -259,7 +259,7 @@ const data = {
       "NOM_LONG": "République du Congo"
     },
     {
-      "country": "République démocratique du Congo",
+      "country": "Rép. dém. du Congo",
       "correctAnswer": "Kinshasa",
       "article": "de la ",
       "NOM_LONG": "République démocratique du Congo"
@@ -931,7 +931,7 @@ const data = {
       "NOM_LONG": "République de Saint-Marin"
     },
     {
-      "country": "Saint-Vincent-et-les-Grenadines",
+      "country": "St-Vincent-&-les-Grenadines",
       "correctAnswer": "Kingstown",
       "article": "de ",
       "NOM_LONG": "Saint-Vincent-et-les-Grenadines"
