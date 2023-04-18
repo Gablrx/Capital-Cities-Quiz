@@ -86,9 +86,10 @@ function App() {
         <div className="form">
           <div>
             <input type="text" onChange={(event) => { checkUserAnswer(event); }} />
+            <button onClick={() => nextQuestion()}>Next</button>
           </div>
 
-          <button onClick={() => nextQuestion()}>Next</button>
+
         </div>
       </div>
     </div>

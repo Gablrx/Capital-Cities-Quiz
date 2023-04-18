@@ -15,8 +15,8 @@
   box-shadow: -3px 3px 0 #10162f;
 
   padding-top: 5px;
-  width: 98%;
-  height: 500px;
+  width: 500px;
+  height: 300px;
   margin: auto;
 }
 h1 {
@@ -50,7 +50,7 @@ input {
   background-color: rgb(255, 255, 255);
   box-shadow: -2px 2px 0 #10162f;
   outline: none;
-  margin: 20px 0px;
+  margin: 0px 0px;
 }
 
 button {
@@ -58,6 +58,7 @@ button {
   font-weight: bold;
   border: 1px solid black;
   border-radius: 10px;
-  padding: 5px 25px;
+  padding: 8px 25px;
+  margin-left: 10px;
   background-color: rgb(255, 255, 255);
 }
