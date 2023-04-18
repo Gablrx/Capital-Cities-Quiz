@@ -15,7 +15,7 @@
   box-shadow: -3px 3px 0 #10162f;
 
   padding-top: 5px;
-  width: 500px;
+  max-width: 500px;
   height: 300px;
   margin: auto;
 }
