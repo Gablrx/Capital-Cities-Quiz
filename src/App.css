@@ -1,7 +1,7 @@
 .App {
   width: 100%;
 
-  padding-top: 50px;
+  padding-top: 10px;
 
   font-family: "Baskerville BT", sans-serif;
   font-weight: bold;
@@ -14,7 +14,6 @@
   border: 1px solid black;
   box-shadow: -3px 3px 0 #10162f;
 
-  margin-top: 50px;
   padding-top: 30px;
   width: 98%;
   height: 500px;
