@@ -146,7 +146,7 @@ const data = {
     },
     {
       "country": "Bolivie",
-      "correctAnswer": "Sucre / La Paz",
+      "correctAnswer": "La Paz",
       "article": "de la ",
       "NOM_LONG": "État plurinational de Bolivie"
     },
