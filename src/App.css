@@ -14,7 +14,7 @@
   border: 1px solid black;
   box-shadow: -3px 3px 0 #10162f;
 
-  padding-top: 30px;
+  padding-top: 20px;
   width: 98%;
   height: 500px;
   margin: auto;
@@ -23,7 +23,7 @@ h1 {
   font-size: 20px;
 }
 h2 {
-  height: 70;
+  height: 50px;
   font-size: 35px;
   overflow: visible;
 }
