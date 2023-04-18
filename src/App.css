@@ -23,8 +23,10 @@ h1 {
   font-size: 20px;
 }
 h2 {
-  height: 20px;
-  font-size: 35px;
+  border: 1px solid black;
+  height: 70px;
+  margin: 0;
+  font-size: 30px;
 }
 
 .swing {
@@ -57,7 +59,7 @@ button {
   font-family: "Baskerville BT", sans-serif;
   font-weight: bold;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 3px;
   padding: 8px 25px;
   margin-left: 10px;
   background-color: rgb(255, 255, 255);
