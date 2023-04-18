@@ -19,25 +19,13 @@ function App() {
 
 
   let [currentQuestion, setNextQuestion] = useState(0);
-  let [isCorrect, setUserAnswer] = React.useState(false)
-
-
-  const [result, setResult] = useState({
-    score: 0,
-    correctAnswers: 0,
-    wrongAnswers: 0,
-  })
+  let [isCorrect, checkIfCorrect] = useState(false);
+  let [input, clearInput] = useState('');
 
 
 
 
-  const nextQuestion = () => {
 
-    setNextQuestion(currentQuestion + 1);
-    setUserAnswer(isCorrect = false);
-    console.log(currentQuestion)
-
-  }
 
   console.log(questions[currentQuestion].country + ' = ' + questions[currentQuestion].correctAnswer)
 
@@ -47,13 +35,20 @@ function App() {
   const checkUserAnswer = (event) => {
 
     let userAnswer = event.target.value.toLowerCase();
+    clearInput(userAnswer)
 
     if (userAnswer === (questions[currentQuestion].correctAnswer.toLowerCase())) {
-      setUserAnswer(isCorrect = true)
+      checkIfCorrect(isCorrect = true)
       console.log(isCorrect + 'Bravo')
     } else { console.log(isCorrect) }
   }
+  const nextQuestion = () => {
+    clearInput('');
+    setNextQuestion(currentQuestion + 1);
+    checkIfCorrect(isCorrect = false);
+    console.log(currentQuestion);
 
+  }
 
 
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
@@ -85,8 +80,8 @@ function App() {
 
         <div className="form">
           <div>
-            <input type="text" onChange={(event) => { checkUserAnswer(event); }} />
-            <button onClick={() => nextQuestion()}>Next</button>
+            <input type="text" value={input} onChange={(event) => { checkUserAnswer(event); }} />
+            <button className={isCorrect ? "trueBtn" : "falseBtn"} onClick={() => nextQuestion()}>Next</button>
           </div>
 
 
