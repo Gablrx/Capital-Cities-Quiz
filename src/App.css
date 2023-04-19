@@ -13,28 +13,43 @@
   background-color: #fff0e5;
   border: 1px solid black;
   box-shadow: -3px 3px 0 #10162f;
-  margin: 0px 5px;
-  padding-top: 5px;
+
   max-width: 500px;
   height: 300px;
   margin: auto;
+  display: grid;
+  grid-template-rows: 60px 80px 50px 100px;
 }
+.questionBox > * {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .question {
+  
+} */
+/* .country {
+} */
+.answerDisplay {
+  font-size: 40px;
+  font-weight: 600;
+}
+/* .form {
+}
+ */
 h1 {
   font-size: 20px;
 }
 h2 {
   height: 65px;
-  margin: 0;
+
   font-size: 30px;
 }
 
 .swing {
-  display: inline-block;
-
   font-size: 65px;
   font-weight: 600;
-  margin: 0;
-
   animation: pulse 1s infinite ease-in-out alternate;
 }
 @keyframes pulse {
@@ -55,7 +70,7 @@ input {
   background-color: rgb(255, 255, 255);
   box-shadow: -2px 2px 0 #10162f;
   outline: none;
-  margin: 0px 0px;
+
   text-align: center;
 }
 

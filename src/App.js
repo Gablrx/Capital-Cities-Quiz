@@ -15,13 +15,12 @@ for (let i of dataList) {
 function App() {
 
 
-
-
-
   let [currentQuestion, setNextQuestion] = useState(0);
   let [isCorrect, checkIfCorrect] = useState(false);
   let [input, setInput] = useState('');
   let [disabledBtn, setDisabledBtn] = useState(true)
+  let [answer, showAnswer] = useState('?');
+
 
 
   const checkUserAnswer = (event) => {
@@ -31,7 +30,8 @@ function App() {
     console.log('disabled ' + disabledBtn);
     if (userAnswer === (questions[currentQuestion].correctAnswer.toLowerCase())) {
       checkIfCorrect(isCorrect = true); // Bonne réponse
-      setDisabledBtn(false);
+      showAnswer(questions[currentQuestion].correctAnswer + '!'); // Affiche la réponse
+      setDisabledBtn(false);// Active btn next
 
     } else {// Mauvaise réponse
 
@@ -44,7 +44,7 @@ function App() {
     setDisabledBtn(true)
     setNextQuestion(currentQuestion + 1); // index+1 -> question suivante
     checkIfCorrect(isCorrect = false); // réinitialise isCorrect
-
+    showAnswer('?')
   }
 
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
@@ -75,7 +75,11 @@ function App() {
           <h2>{questions[currentQuestion].country}</h2>
 
         </div>
-        <span className="swing">?</span>
+
+
+        <div className="answerDisplay">
+          <span className={isCorrect ? "answer" : "swing"}>{answer}</span>
+        </div>
 
 
         <div className="form">
@@ -83,8 +87,6 @@ function App() {
             <input type="text" value={input} onChange={(event) => { checkUserAnswer(event); }} />
             <button disabled={disabledBtn} className={isCorrect ? "trueBtn" : "falseBtn"} onMouseDown={() => nextQuestion()}><span>Next </span></button>
           </div>
-
-
         </div>
       </div>
     </div>

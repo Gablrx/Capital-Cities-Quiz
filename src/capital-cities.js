@@ -97,9 +97,9 @@ const data = {
       "NOM_LONG": "Royaume de Bahreïn"
     },
     {
-      "country": "l'Bangladesh",
+      "country": "Bangladesh",
       "correctAnswer": "Dacca",
-      "article": "de ",
+      "article": "du ",
       "NOM_LONG": "République populaire du Bangladesh"
     },
     {
