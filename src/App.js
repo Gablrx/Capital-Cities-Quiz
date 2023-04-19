@@ -30,7 +30,7 @@ function App() {
     console.log('disabled ' + disabledBtn);
     if (userAnswer === (questions[currentQuestion].correctAnswer.toLowerCase())) {
       checkIfCorrect(isCorrect = true); // Bonne réponse
-      showAnswer(questions[currentQuestion].correctAnswer + '!'); // Affiche la réponse
+      showAnswer(questions[currentQuestion].correctAnswer + ' !'); // Affiche la réponse
       setDisabledBtn(false);// Active btn next
 
     } else {// Mauvaise réponse
